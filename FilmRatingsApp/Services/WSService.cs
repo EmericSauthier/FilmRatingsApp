@@ -34,12 +34,23 @@ namespace FilmsRatingsApp.Services
                 return null;
             }
         }
+        public async Task<Utilisateur> GetUtilisateurAsync(string nomControleur, int id)
+        {
+            try
+            {
+                return await httpClient.GetFromJsonAsync<Utilisateur>(string.Concat(nomControleur, "/GetById/", id));
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
 
         public async Task<Utilisateur> GetUtilisateurAsync(string nomControleur, string email)
         {
             try
             {
-                return await httpClient.GetFromJsonAsync<Utilisateur>(string.Concat(nomControleur, "/", email));
+                return await httpClient.GetFromJsonAsync<Utilisateur>(string.Concat(nomControleur, "/GetByEmail/", email));
             }
             catch (Exception)
             {

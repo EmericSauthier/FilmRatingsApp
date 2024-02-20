@@ -10,6 +10,7 @@ namespace FilmRatingsApp.Services
     public interface IService
     {
         Task<List<Utilisateur>> GetUtilisateursAsync(string nomControleur);
+        Task<Utilisateur> GetUtilisateurAsync(string nomControleur, int id);
         Task<Utilisateur> GetUtilisateurAsync(string nomControleur, string email);
         Task<bool> PostUtilisateurAsync(string nomControleur, Utilisateur user);
         Task<bool> PutUtilisateurAsync(string nomControleur, Utilisateur user);
