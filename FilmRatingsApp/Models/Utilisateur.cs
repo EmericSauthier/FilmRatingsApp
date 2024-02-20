@@ -64,7 +64,7 @@ namespace FilmRatingsApp.Models
         {
             get; set;
         }
-        public virtual ICollection<Notation> NotesUtilisateur
+        public ICollection<Notation> NotesUtilisateur
         {
             get; set;
         }

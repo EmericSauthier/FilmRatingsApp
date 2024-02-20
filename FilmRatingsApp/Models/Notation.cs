@@ -19,11 +19,11 @@ namespace FilmRatingsApp.Models
         {
             get; set;
         }
-        public virtual Film FilmNote
+        public Film FilmNote
         {
             get; set;
         }
-        public virtual Utilisateur UtilisateurNotant
+        public Utilisateur UtilisateurNotant
         {
             get; set;
         }
